@@ -1,7 +1,9 @@
 FirstApp::Application.routes.draw do
+  get "pages/home"
   resources :microposts
-
+  root :to  => 'pages#home'
   resources :users
+  get 'about' => 'pages#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
